@@ -1064,9 +1064,9 @@ class Client
     /*
      * Users
      */
-    public function getUsers()
+    public function getUsers($filters = [])
     {
-        return $this->sendRequest('/users');
+        return $this->sendRequest('/users', [], self::METHOD_GET, $filters);
     }
 
     public function getUser($iduser)

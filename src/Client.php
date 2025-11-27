@@ -1069,6 +1069,11 @@ class Client
         return $this->sendRequest('/users', [], self::METHOD_GET, $filters);
     }
 
+    public function getAllUsers($filters = array())
+    {
+        return $this->getAllResults('user', $filters);
+    }
+
     public function getUser($iduser)
     {
         return $this->sendRequest('/users/' . $iduser);

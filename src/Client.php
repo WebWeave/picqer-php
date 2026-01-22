@@ -989,6 +989,11 @@ class Client
         return $this->sendRequest('/backorders/' . $idbackorder);
     }
 
+    public function getAllBackorders($filters = [])
+    {
+        return $this->getAllResults('backorder', $filters);
+    }
+
     public function processBackorders()
     {
         return $this->sendRequest('/backorders/process', null, self::METHOD_POST);
